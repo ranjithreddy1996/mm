@@ -18,7 +18,7 @@ let server = app.listen(3000, function(){
   let port = server.address().port;
   console.log("Server started at ", port);
 });
-app.get("https://ranjithmailservice.herokuapp.com", (req, res) => {
+app.get("/", (req, res) => {
   res.send(
     "<h1 style='text-align: center'>Wellcome to FunOfHeuristic <br><br>😃👻😃👻😃👻😃👻😃</h1>"
   );
