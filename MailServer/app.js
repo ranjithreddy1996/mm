@@ -10,14 +10,14 @@ const app = express();
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
-// app.listen(process.env.PORT || 3000, function () { 
-//   console.log("SERVER STARTED PORT: 3000"); 
-// }); 
+app.listen(process.env.PORT || 3000, function () { 
+  console.log("SERVER STARTED PORT: 3000"); 
+}); 
 
-let server = app.listen(3000, function(){
-  let port = server.address().port;
-  console.log("Server started at ", port);
-});
+// let server = app.listen(3000, function(){
+//   let port = server.address().port;
+//   console.log("Server started at ", port);
+// });
 app.get("/", (req, res) => {
   res.send(
     "<h1 style='text-align: center'>Wellcome to FunOfHeuristic <br><br>😃👻😃👻😃👻😃👻😃</h1>"
